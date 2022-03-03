@@ -1,0 +1,87 @@
+%نام و نام خانوادگی:
+%شماره دانشجویی: 
+\مسئله{تشخیص ID}
+
+
+\پاسخ{}
+
+
+
+\begin{center}
+\begin{tikzpicture}[scale=0.2]
+\tikzstyle{every node}+=[inner sep=0pt]
+\draw [black] (10.1,-17.5) circle (3);
+\draw (10.1,-17.5) node {$0$};
+\draw [black] (54.5,-17.5) circle (3);
+\draw (54.5,-17.5) node {$2$};
+\draw [black] (76.2,-17.5) circle (3);
+\draw (76.2,-17.5) node {$3$};
+\draw [black] (76.2,-17.5) circle (2.4);
+\draw [black] (31.2,-17.5) circle (3);
+\draw (31.2,-17.5) node {$1$};
+\draw [black] (31.2,-17.5) circle (2.4);
+%\draw [black] (5.5,-3.2) circle (3);
+\draw (5.5,-3.2) node {$Id\mbox{ }detect:$};
+\draw [black] (6.2,-12.9) -- (8.16,-15.21);
+\draw (3.8,-12.41) node [above] {$Start$};
+\fill [black] (8.16,-15.21) -- (8.02,-14.28) -- (7.26,-14.92);
+\draw [black] (53.46,-14.698) arc (228.09386:-59.90614:2.25);
+\draw (55.71,-10.07) node [above] {$[a-Z]$};
+\fill [black] (56.09,-14.97) -- (57,-14.71) -- (56.25,-14.04);
+\draw [black] (57.343,-18.419) arc (99.81585:-188.18415:2.25);
+\draw (59.87,-23.68) node [right] {$[0-9]$};
+\fill [black] (55.5,-20.32) -- (55.14,-21.19) -- (56.13,-21.02);
+\draw [black] (12.619,-15.877) arc (117.80321:62.19679:17.219);
+\fill [black] (28.68,-15.88) -- (28.21,-15.06) -- (27.74,-15.95);
+\draw (20.65,-13.39) node [above] {$[a-Z]$};
+\draw [black] (29.877,-14.82) arc (234:-54:2.25);
+\draw (31.2,-10.25) node [above] {$[a-Z]$};
+\fill [black] (32.52,-14.82) -- (33.4,-14.47) -- (32.59,-13.88);
+\draw [black] (28.507,-18.815) arc (-68.05692:-111.94308:21.025);
+\fill [black] (12.79,-18.82) -- (13.35,-19.58) -- (13.72,-18.65);
+\draw (20.65,-20.84) node [below] {$T\_underLine$};
+\draw [black] (33.506,-15.588) arc (124.45654:55.54346:16.515);
+\fill [black] (52.19,-15.59) -- (51.82,-14.72) -- (51.25,-15.55);
+\draw (42.85,-12.19) node [above] {$[a-Z]$};
+\draw [black] (52.115,-19.313) arc (-57.71215:-122.28785:17.344);
+\fill [black] (52.11,-19.31) -- (51.17,-19.32) -- (51.71,-20.16);
+\draw (42.85,-22.5) node [below] {$T\_underLine$};
+\draw [black] (34.2,-17.5) -- (51.5,-17.5);
+\fill [black] (51.5,-17.5) -- (50.7,-17) -- (50.7,-18);
+\draw (42.85,-18) node [below] {$[0-9]$};
+\draw [black] (57.5,-17.5) -- (73.2,-17.5);
+\fill [black] (73.2,-17.5) -- (72.4,-17) -- (72.4,-18);
+\draw (65.35,-18) node [below] {$[a-Z]$};
+\draw [black] (11.619,-14.915) arc (146.10588:33.89412:24.915);
+\fill [black] (11.62,-14.92) -- (12.48,-14.53) -- (11.65,-13.97);
+\draw (32.3,-3.39) node [above] {$T\_underLine$};
+\end{tikzpicture}
+\end{center}
+
+
+\begin{center}
+\LTR
+\begin{lstlisting}
+
+read(str);
+if (str.charAt(0) in [a-z] or [A_Z]){
+	int i=1;
+	while(i < str.length() ){
+		if(str.charAt(i) in [a-z] or [A_Z] or [0-9])
+			i++;
+		else if (str.charAt(i) == '-')
+			if(str.charAt(i++)=='-')
+				sout("No");
+		else
+			i++;
+	}
+}
+if(str.length > 1)
+	if(str.charAt(str.length) in [a-z] or [A_Z])
+		sout("Yes");
+	else
+		sout("No");
+\end{lstlisting}
+\end{center}
+
+\pagebreak

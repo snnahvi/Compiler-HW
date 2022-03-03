@@ -1,0 +1,91 @@
+ اعضای گروه: آزاده نحوی(97243098)، نگار رضوانفر(97243104)
+
+						
+\مسئله{تشخیص comment}
+
+\پاسخ{}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.2]
+\tikzstyle{every node}+=[inner sep=0pt]
+\draw [black] (9.8,-19.5) circle (3);
+\draw (9.8,-19.5) node {$0$};
+\draw [black] (23.2,-19.5) circle (3);
+\draw (23.2,-19.5) node {$1$};
+\draw [black] (23.2,-40.9) circle (3);
+\draw (23.2,-40.9) node {$4$};
+\draw [black] (38,-40.9) circle (3);
+\draw (38,-40.9) node {$5$};
+\draw [black] (38,-40.9) circle (2.4);
+\draw [black] (38,-19.5) circle (3);
+\draw (38,-19.5) node {$2$};
+\draw [black] (38,-19.5) circle (2.4);
+\draw [black] (23.2,-29) circle (3);
+\draw (23.2,-29) node {$3$};
+%\draw [black] (9.8,-4.8) circle (3);
+\draw (9.8,-4.8) node {$comment:$};
+\draw [black] (12.8,-19.5) -- (20.2,-19.5);
+\fill [black] (20.2,-19.5) -- (19.4,-19) -- (19.4,-20);
+\draw (16.5,-19) node [above] {$T\_/$};
+\draw [black] (26.2,-19.5) -- (35,-19.5);
+\fill [black] (35,-19.5) -- (34.2,-19) -- (34.2,-20);
+\draw (30.6,-19) node [above] {$T\_/$};
+\draw [black] (23.2,-22.5) -- (23.2,-26);
+\fill [black] (23.2,-26) -- (23.7,-25.2) -- (22.7,-25.2);
+\draw (22.7,-24.25) node [left] {$T\_*$};
+\draw [black] (23.2,-32) -- (23.2,-37.9);
+\fill [black] (23.2,-37.9) -- (23.7,-37.1) -- (22.7,-37.1);
+\draw (22.7,-34.95) node [left] {$T\_*$};
+\draw [black] (26.2,-40.9) -- (35,-40.9);
+\fill [black] (35,-40.9) -- (34.2,-40.4) -- (34.2,-41.4);
+\draw (30.6,-41.4) node [below] {$T\_/$};
+\draw [black] (25.647,-27.285) arc (152.74616:-135.25384:2.25);
+\draw (30.57,-27.78) node [right] {$T\_id$};
+\fill [black] (26.05,-29.9) -- (26.53,-30.71) -- (26.99,-29.82);
+\draw [black] (37.006,-16.682) arc (227.15723:-60.84277:2.25);
+\draw (39.5,-12.06) node [above] {$T\_id$};
+\fill [black] (39.63,-17) -- (40.54,-16.75) -- (39.81,-16.07);
+\draw [black] (6,-15.8) -- (7.65,-17.41);
+\draw (5.47,-14.33) node [left] {$Start$};
+\fill [black] (7.65,-17.41) -- (7.43,-16.49) -- (6.73,-17.21);
+\end{tikzpicture}
+\end{center}
+
+
+
+\pagebreak
+
+\begin{center}
+\LTR
+\begin{lstlisting}
+
+public class Qu1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        String str = sc.next();
+
+        switch (str){
+            case "//" :
+                System.out.println("Single comment");
+                break;
+            case "/*" :
+                String[] commands = new String[2];
+                while (sc.hasNext()){
+                    commands[0] = sc.next();
+                    commands[1] = sc.next();
+                    if( commands[0].equals("*")){
+                        if (commands[1].equals("/"))
+                             System.out.println("multi line comments");
+                          
+                        break;
+                    }
+                }
+                break;
+        }
+    }
+    
+}
+\end{lstlisting}
+\end{center}
+
+\pagebreak

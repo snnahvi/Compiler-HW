@@ -1,0 +1,82 @@
+%نام و نام خانوادگی:
+%شماره دانشجویی: 
+\مسئله{تشخیص String}
+
+
+\پاسخ{}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.2]
+\tikzstyle{every node}+=[inner sep=0pt]
+%\draw [black] (7.3,-5.6) circle (3);
+\draw (7.3,-5.6) node {$Double\mbox{ }Quotes:$};
+\draw [black] (13.2,-15.2) circle (3);
+\draw (13.2,-15.2) node {$0$};
+\draw [black] (28.3,-15.2) circle (3);
+\draw (28.3,-15.2) node {$1$};
+\draw [black] (45.4,-15.2) circle (3);
+\draw (45.4,-15.2) node {$2$};
+\draw [black] (45.4,-15.2) circle (2.4);
+\draw [black] (28.3,-31.8) circle (3);
+\draw (28.3,-31.8) node {$3$};
+\draw [black] (45.4,-31.8) circle (3);
+\draw (45.4,-31.8) node {$4$};
+\draw [black] (4.6,-15.2) -- (10.2,-15.2);
+\draw (4.1,-15.2) node [left] {$start$};
+\fill [black] (10.2,-15.2) -- (9.4,-14.7) -- (9.4,-15.7);
+\draw [black] (16.2,-15.2) -- (25.3,-15.2);
+\fill [black] (25.3,-15.2) -- (24.5,-14.7) -- (24.5,-15.7);
+\draw (20.75,-15.7) node [below] {$T\_"$};
+\draw [black] (26.977,-12.52) arc (234:-54:2.25);
+\draw (28.3,-7.95) node [above] {$\Sigma-{T\_"}$};
+\fill [black] (29.62,-12.52) -- (30.5,-12.17) -- (29.69,-11.58);
+\draw [black] (31.3,-15.2) -- (42.4,-15.2);
+\fill [black] (42.4,-15.2) -- (41.6,-14.7) -- (41.6,-15.7);
+\draw (36.85,-15.7) node [below] {$T\_"$};
+\draw [black] (28.3,-18.2) -- (28.3,-28.8);
+\fill [black] (28.3,-28.8) -- (28.8,-28) -- (27.8,-28);
+\draw (27.8,-23.5) node [left] {$T\_/$};
+\draw [black] (31.3,-31.8) -- (42.4,-31.8);
+\fill [black] (42.4,-31.8) -- (41.6,-31.3) -- (41.6,-32.3);
+\draw (36.85,-32.3) node [below] {$T\_"$};
+\draw [black] (26.841,-34.408) arc (-1.4933:-289.4933:2.25);
+\draw (22.14,-36.98) node [left] {$T\_/$};
+\fill [black] (25.34,-32.23) -- (24.56,-31.71) -- (24.53,-32.71);
+\draw [black] (48.08,-30.477) arc (144:-144:2.25);
+\draw (52.65,-31.8) node [right] {$\Sigma-{T\_"}$};
+\fill [black] (48.08,-33.12) -- (48.43,-34) -- (49.02,-33.19);
+\draw [black] (45.4,-28.8) -- (45.4,-18.2);
+\fill [black] (45.4,-18.2) -- (44.9,-19) -- (45.9,-19);
+\draw (45.9,-23.5) node [right] {$T\_"$};
+\end{tikzpicture}
+\end{center}
+
+
+
+
+
+
+
+
+\begin{center}
+\LTR
+\begin{lstlisting}
+
+int i = 1;
+if(str.charAt(0) == ' " '){
+	while(i<str.lenght()-1){
+		if (str.charAt(i) in sigma - ' " ')
+			i++;
+		else if (str.charAt(i--) == '\')
+			i += 2;
+
+     }
+}
+
+if (str.charAt(str.lenght-1) == ' " ')
+	sout("Yes");
+
+\end{lstlisting}
+\end{center}
+
+\pagebreak
