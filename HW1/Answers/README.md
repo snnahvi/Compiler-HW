@@ -6,8 +6,7 @@ For running this solution, the following actions should be done:
 2. Upload all files except the “commons” folder in your project;
 3. Create new folder in your project and name it “commons”;
 4. Upload all files of the “commons” folder to your “commons” folder;
-5. To write in Persian Language, it is necessary to change these items in the menu section;
-6. In setting section: 
-    6.1. Set Compiler on XeLaTeX 
-    6.2. Set TeXLive version on 2017 (Legacy)
-    6.3. Set Main document on A1.tex
+5. To write in Persian Language, it is necessary to change these items in the menu section; In setting section: 
+6. Set Compiler on XeLaTeX 
+7. Set TeXLive version on 2017 (Legacy)
+8. Set Main document on A1.tex
